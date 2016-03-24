@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="jumbotron">
+            <%= current_user.username %>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-3">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p>profile</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-xs-6">
+    <%= render '/components/post_form' %>
+        <% for @p in @posts %>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p><%= @p.content %></p>
+            <p><%= image_tag @p.photo.url %></p>
+            </div>
+        </div>
+         <% end %>
+    </div>
+    <div class="col-xs-3">
+       <div class="panel panel-default">
+          <div class="panel-body"> 
+                <p>about</p>
+            </div>
+        </div>
+    
+    
+    </div>
+
+
+
