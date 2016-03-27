@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   #defines the root url
-  resources :posts
+  resources :posts do
+    member do
+      put "like", to: "posts#upvote"
+    end
+  end
   resources :photos
   resources :photo
   resources :photo_file_name
@@ -13,7 +17,8 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
-  
+  resources :relationships, only: [:create, :destroy]
+  resources :votes
 
   root'pages#index'
   #routes
