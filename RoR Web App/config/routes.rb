@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   resources :photo_content_type
   resources :photo_file_size
   resources :photo_updated_at
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   
 
   root'pages#index'
