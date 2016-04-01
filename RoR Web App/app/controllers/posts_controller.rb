@@ -14,6 +14,11 @@ class PostsController < ApplicationController
             end
         end
     end
+    def upvote
+        @post = Post.find(params[:id])
+        @post.upvote_by current_user
+        redirect_to :back
+    end
     
     
     private
@@ -21,9 +26,5 @@ class PostsController < ApplicationController
         params.require(:post).permit(:user_id, :content, :photo)
         
     end
-    def upvote
-        @post = Post.find(params[:id])
-        @post.upvote_by current_user
-        redirect_to :back
-    end
+    
 end

@@ -8,4 +8,5 @@ class Post < ActiveRecord::Base
   validates_attachment :photo
     validates_attachment_content_type :photo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   acts_as_votable
+ 
 end
