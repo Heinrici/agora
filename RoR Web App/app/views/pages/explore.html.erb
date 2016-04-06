@@ -1,13 +1,28 @@
-<h1>Pages#explore</h1>
-<p>Find me in app/views/pages/explore.html.erb</p>
-<div class="row">
-     <div class="col-xs-9">
-        <% for @p in @posts %>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <p><%= @p.content %></p>
-            </div>
-        </div>
-         <% end %>
-      </div>
-    </div>
+
+<head>
+ 
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+
+
+</head>
+
+     
+<body>
+
+<div id="grid">
+<center><div id="grid2">
+          <% for @p in @posts %>  
+                <img src="<%= @p.photo %>" id="postpanel"> 
+               
+               
+             <% end %>
+
+</div></center>
+</div>
+
+  
+</body>

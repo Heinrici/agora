@@ -1,6 +1,7 @@
 <!-- user nav -->
+
 <% if !user_signed_in? %>
-  <%= render 'layouts/nav_guest' %>
+  <%= render 'layouts/nav_guest'%>
 <% else %>
   <%= render 'layouts/nav_user' %>
 <% end %>

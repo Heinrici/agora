@@ -1,0 +1,243 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+/* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.navbar{
+	background-color:white	
+}
+body{
+	background-color:rgba(212,216,212,0.25)
+}
+.navbar-form{
+	position:absolute;
+	left: 40%;
+}
+
+.noscroll { position: fixed; overflow-y:scroll;
+height: 100%;
+width: 100%;
+background-color: white;
+z-index: -2
+}
+
+div.backgroundimage {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    height: 1264px;
+
+    width: 2048px;
+   
+    background-image: url(/indeximages/scenictwo.jpg);
+    z-index: -1;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+div.whiteopac {
+    background-color: rgba(255,255,255,0.4);
+    position: fixed;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.title {
+   
+    z-index: 1;
+    width: 700px;
+    height: 200px;
+    /* use for visibility background-color: white;*/
+    align-items: center;
+    display: flex;
+}
+
+img.logo {
+    height: 100%;
+    width: height;
+    float: left;
+    border-radius: 25px;
+}
+
+
+#namediv {
+    float: left;
+    z-index: 2;
+ 
+    padding-left: 20px;    
+    text-align: middle;
+}
+
+#nameheading{
+    vertical-align: middle;
+    font-size: 70px;
+    font-family: "Arial", Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.signupform {
+    height: 20px;
+    width: 400px;
+    background-color: black;
+}
+
+.panel {
+    width: 200px;
+    z-index: 3;
+    background-color: orange;
+    font-family:"Arial", Helvetica, sans-serif;
+
+}
+
+.buttondiv {
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+#loginform {
+    z-index: 4;
+    height: 200px;
+    width: 200px;
+}
+
+#loginbutton {
+    padding: 5px;
+
+}
+
+#rememberme {
+    padding-top: 5px
+}
+
+/*explore*/
+
+#grid {
+    
+    width: 100%;
+    height: 1000px;
+    background-color: none;
+}
+
+#row {
+    position: absolute;
+    height: 40%;
+    max-height: 200px;
+    width: 100%;
+    background-color: orange;
+}
+
+body {
+    height: 1000px;
+    align-content: center;
+  
+}
+
+#postpanel {
+    height: 200px;
+    background-color: white;
+    width: 200px;
+    display: inline-block;
+    margin: 5px;
+
+}
+
+#grid2 {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+#hoverwhite {
+    height: 200px;
+    background-color: white;
+    width: 200px;
+    margin: 5px;
+    z-index: 4;
+    position: absolute;
+    display: inline-block;
+
+}
+/*profile*/
+
+
+#profilehead {
+    height: auto;
+   /*background-color: black;*/    
+    z-index: 1;
+
+}
+
+#profilein {
+    height: 100%;
+   width: 70%;
+    z-index: 2;
+  /*background-color: white;*/
+
+}
+
+#profusername {
+    display: inline-block;
+    /*background-color: green;*/    
+    height: 30%;
+    margin: 2px;
+    line-height: 20px;
+    padding-top: 15px;
+    font-size: 200%;
+    margin-top: 10px;
+}
+
+#caption {
+    width: 100%;
+    /*background-color: green;*/
+    padding: 5px;
+    text-align: left;
+
+
+}
+
+#nexttoimg {
+    height: 100%;
+    display: inline-block;
+    /*background-color: orange;*/
+    max-width: 60%;
+
+}
+#profpic {
+    display: inline-block;
+    width: height;
+    height: 200px;
+   margin-bottom: 10px;
+
+
+
+}
+
+#pfpanel {
+    /*background-color: green;*/
+    margin-top: -10px; 
+    z-index: 1;
+    font-size: 30px;
+}
+
+
+
+
+
+

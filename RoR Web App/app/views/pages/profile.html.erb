@@ -1,4 +1,4 @@
-<div class="row">
+<!--<div class="row">
     <div class="col-xs-12">
         <div class="jumbotron">
             <%= current_user.username %>
@@ -35,7 +35,56 @@
         </div>
     
     
-    </div>
+    </div> -->
+<body>
+    <!--start prof head -->
+    <div style="width: 100%;  height: auto;">
+    <center>
+    <div id="profilehead">
+        <div id="profilein">
+            <!--profpic -->
+             <img src="indeximages/cropped.jpg" id="profpic" >
+             <!-- render profpic^^^^^ -->
+             <div id="nexttoimg">
+             <div id="profusername" ><%= current_user.username %></div>
+              
+               <div id="caption">
+                <!-- ruby get caption -->
+                "He's the reason for the teardrops on my guitar
+                The only thing that keeps me wishing on a wishing star
+                He's the song in the car I keep singing, don't know why I do" -tswizzle
+                </div>
 
+                 <%= render '/components/post_form' %>
+            </div>
+            <hr></hr>
+            <div style="width: 100%; display: block; height: 40px; ">
+               <div style="margin-right: 40px;  width: 30%; display: inline-block; font-size: 30px; text-align: center;"><!-- render number of photos for user -->
+                Photos</div>
+                
+               <div style="margin-left: 40px;  width: 30%; display: inline-block; font-size: 30px; text-align: center;"><!-- render number of followers for user -->
+                Followers</div>
+            </div>
+             
+       </div>
+              
+    </div>
+    </center>
+    </div>
+<!--end prof head -->
+    <div id="grid" style="margin-top: 20px;">
+            <center><div id="grid2">
+                      <% for @p in @posts %>  
+                            
+                            <img src="<%= @p.photo %>" id="postpanel"> 
+                           
+                           
+                         <% end %>
+
+            </div></center>
+
+
+
+</body>
 
 
