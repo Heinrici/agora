@@ -36,16 +36,4 @@ $("#signupload").click(function()  {
 }	
 });
 
-$('#postpanel').hover(
-
-	function () {
-		$('#hoverwhite').show("slow");
-	},
-	function () {
-		$('#hoverwhite').hide("slow");
-	}
-
-	);
-
-
 });
