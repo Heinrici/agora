@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div id="newsfeed" class="col-lg-6">
     <h4><%= fa_icon "newspaper-o" %> NEWSFEED</h4>
     <div id="activities">
@@ -24,4 +24,127 @@
       <%= fa_icon 'code-fork' %> Fork it
     </a>
   </div>
-</div>
+</div> -->
+
+<body class="noscroll"> 
+<!-- disables scrolling -->
+  <div class="backgroundimage"> 
+  <!-- includes background image resizable -->
+    <div class="whiteopac"><!-- inludes white opacitated overlay -->
+      
+        <div class="movingcolumn" style="display: inline-flex;">
+          <div style="margin: auto;">
+            <div style="font-size: 70px; font-family: 'Montserrat', sans-serif;">
+            Handshake
+            </div>
+            <img src="images/favicon.ico" style="height: 200px; width: 200px;">
+          </div>
+          
+
+
+
+
+
+
+        </div>
+      
+    
+        <div class="movingcolumn" style="display: inline-flex; float: right;">
+        <div class="incolumndiv">
+      <center>
+    
+               <div class="buttondiv"> 
+
+                  <!--button 1 -->
+                  <div id="loginload" class="btn btn-primary" >
+                  Login
+                </div>
+                
+                <!-- button 1 end -->
+
+
+                <!--button 2 -->
+                  <button id="signupload" class="btn btn-primary" >
+                  Sign Up
+                </button>
+                
+                <!-- button 2 end -->
+
+                
+                <!--button 3 -->
+                <button id="BaG" class="btn btn-primary" >
+                  Browse as Guest
+                </button>
+                <!--button 3 end -->
+            
+            </div> <!--end div with the buttons -->
+          
+            <!-- start login/signup panels -->
+        
+            <!-- startl login panels -->
+
+            <div class="panel" id="loginpanel">
+                  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                    <div class="fieldfield">
+                      <%= f.label :email %>
+                      <%= f.email_field :email, class: 'form-control', autofocus: true, placeholder: 'email@example.com' %>
+                    </div>
+                    <div class="fieldfield">
+                      <%= f.label :password %>
+                      <%= f.password_field :password, class: 'form-control', autocomplete: 'off', placeholder: 'password' %>
+                    </div>
+                    <% if devise_mapping.rememberable? -%>
+                      <div class="fieldfield">
+                        <%= f.check_box :remember_me %>
+                        <%= f.label :remember_me %>
+                      </div>
+                    <% end -%>
+                    <div class="actions">
+                      <%= f.submit 'Log in', class: 'btn btn-success' %>
+                    </div>
+                  <% end %>
+            </div>
+            <!-- end login panel -->
+
+            <!-- startl signup panels -->
+            <div class="panel" id="signuppanel" style="display: none">
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <% if resource.errors.any? %>
+                  <div class="alert alert-danger alert-dismissable">
+                    <%= resource.errors.full_messages.first %>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  </div>
+                <% end %>
+                <div class="fieldfield"> 
+                  <%= f.label :name %>
+                  <%= f.text_field :name, class: 'form-control', autofocus: true, placeholder: 'Full name' %>
+                </div>
+                <div class="fieldfield">
+                  <%= f.label :email %>
+                  <%= f.email_field :email, class: 'form-control', placeholder: 'email@example.com' %>
+                </div>
+                <div class="fieldfield">
+                  <%= f.label :password %>
+                  <% if @minimum_password_length %>
+                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br>
+        <%= f.password_field :password, class: 'form-control', autocomplete: 'off', placeholder: 'password' %>
+              </div>
+              <div class="fieldfield">
+                <%= f.label :password_confirmation %>
+                <%= f.password_field :password_confirmation, class: 'form-control', autocomplete: 'off', placeholder: 'password confirmation' %>
+              </div>
+              <div class="actions" style="padding-top: 10px;">
+                <%= f.submit 'Sign up', class: 'btn btn-success' %>
+              </div>
+        <% end %>
+            </div>
+            <!-- end signup panel -->
+        
+            <!-- end login/signup panels -->
+
+      </center>
+      </div>
+      </div> 
+
+</body> 
