@@ -16,6 +16,25 @@ class ApplicationController < ActionController::Base
   end
 
   include PublicActivity::StoreController
+
+ def resource_name
+    :user
+  end
+
+  def resource
+    @resource ||= User.new
+  end
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
+  end
+     def set_user
+    @user = current_user
+  end
+def is_current_user?(user)
+    user == current_user
+  end
+@users = User.all
 end
   
   def resource_name
