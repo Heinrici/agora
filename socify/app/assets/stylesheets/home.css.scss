@@ -49,7 +49,7 @@ z-index: -2
   height: 100%;
   width: 50%;
   display: inline-flex;
-  position: auto;
+  position: auto;position: relative;
 }
 
 
@@ -304,5 +304,8 @@ z-index: -2;
   padding: 10px;
   background-color: rgba(255,255,255,0.7);
   display: inline-flex;
-  border-radius: 5px;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%; left: 25%;
+  transform: translate(-50%,-50%);
 }
