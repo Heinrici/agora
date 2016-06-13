@@ -33,23 +33,25 @@
 }
 
 }*/
-.navbar-form{
+.navbar-form {
   position:absolute;
   left: 40%;
 }
 
-.noscroll { position: fixed; overflow-y:scroll;
-height: 100%;
-width: 100%;
-background-color: white;
-z-index: -2
+.noscroll { 
+  position: fixed; overflow-y:scroll;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: -2
 }
 
 .movingcolumn {
   height: 100%;
   width: 50%;
   display: inline-flex;
-  position: auto;position: relative;
+  position: auto;
+  position: relative;
 }
 
 
@@ -309,3 +311,13 @@ z-index: -2;
   top: 50%; left: 25%;
   transform: translate(-50%,-50%);
 }
+
+#blacksquare {
+  background-color: black;
+  
+}
+#greensquare {
+  background-color: green;
+ 
+}
+
